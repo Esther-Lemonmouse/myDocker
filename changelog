@@ -1,2 +1,5 @@
+2022/03/06
+微调了Image_Classification/README.md，增加了不支持WSL的备注。
+
 2022/03/05
 1. 创建myDocker库，添加所需环境的Dockerfile

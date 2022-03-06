@@ -21,16 +21,18 @@
     ```bash
     # please replace the <USERNAME> with your own directory
     # please change IMAGE_NAME if you have changed it in previous docker build
-    docker run --gpus all --name swin-od -v /home/<USERNAME>/share/:/workspace/share/ -it lemonmouse/swin-image:classification
+    docker run --gpus all --name swin-od -p 12345:12345 -v /home/<USERNAME>/share/:/workspace/share/ -it lemonmouse/swin-image:classification
     ```
     如若无需容器目录挂载，也可执行以下指令
     ```bash
     # please change IMAGE_NAME if you have changed it in previous docker build
-    docker run --gpus all --name swin-od -it lemonmouse/swin-image:classification
+    docker run --gpus all --name swin-od -p 12345:12345 -it lemonmouse/swin-image:classification
     ```
     个人推荐使用目录挂载，便于模型微调和进一步开发。
 
-    _**NB.** 关于Docker 在Linux中的GPU虚拟化技术相关信息，请参阅<https://docs.docker.com/engine/reference/commandline/run/#access-an-nvidia-gpu>。关于如何使用WSL2开启远程Docker的详细步骤，请参阅 [Docker Desktop WSL 2 backend](https://docs.docker.com/desktop/windows/wsl/)。_
+    _**NB.** 关于Docker 在Linux中的GPU虚拟化技术相关信息，请参阅<https://docs.docker.com/engine/reference/commandline/run/#access-an-nvidia-gpu>。_
+    
+    _**NB.** 本教程**暂不支持**使用WSL2开启的docker运行。本容器搭载的PyTorch版本过低，无法正确执行Swin模型。相关内容和可能的解决方案可参考<http://t.csdn.cn/fgbYi>。 ~~关于如何使用WSL2开启远程Docker的详细步骤，请参阅 [Docker Desktop WSL 2 backend](https://docs.docker.com/desktop/windows/wsl/)。~~_
 
 3. 在开启后的Container中执行如下安装命令
     ```bash
