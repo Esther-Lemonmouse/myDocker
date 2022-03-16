@@ -40,4 +40,5 @@ RUN source activate base && \
 
 # clean the caches
 RUN rm /workspace/miniconda3.sh && \
-    rm -rf /tmp/* /var/cache/*  /usr/share/doc/* /usr/share/man/* /var/lib/apt/lists/*
+    rm -rf /tmp/* /var/cache/*  /usr/share/doc/* /usr/share/man/* /var/lib/apt/lists/* && \
+    conda clean -a -y

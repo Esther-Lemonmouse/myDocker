@@ -1,3 +1,6 @@
+2022/03/16
+(我已经不认识我写的Dockerfile了。。。希望它还能run吧) 修改了Dockerfile，增加清理缓存选项。
+
 2022/03/06
 微调了Image_Classification/README.md，增加了不支持WSL的备注。
 

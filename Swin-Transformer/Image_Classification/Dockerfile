@@ -12,7 +12,8 @@ LABEL Author=lemonmouse
 SHELL [ "bash", "-c" ]
 
 # Install related dependencies (without Apex)
-RUN pip install timm==0.3.2 opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8
+RUN pip install timm==0.3.2 opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8 && \
+    conda clean -a -y
 
 # Create a bash commandline as default
 CMD [ "/bin/bash", "-c" ]

@@ -1,6 +1,6 @@
 # Swin-Transformer for Object Detection Docker Image
 
-本Docker镜像可用于构建[Swin-Transformer for Object Detection](https://github.com/microsoft/Swin-Transformer/blob/main/get_started.md)所要求的基本开发环境 (不含NVIDIA Apex)。可以有效解决深度学习中多版本CUDA和cuDNN的冲突问题和NVIDIA Apex不兼容Windows的问题。
+本Docker镜像可用于构建[Swin-Transformer for Object Detection](https://github.com/microsoft/Swin-Transformer/blob/main/get_started.md)所要求的基本开发环境 (不含NVIDIA Apex)。可以有效解决深度学习中多版本CUDA和cuDNN的冲突问题和NVIDIA Apex不兼容Windows的问题。作为示例的版本以cuda10.1-cudnn7的NVIDIA docker为基本镜像。如果需要其他版本的镜像，可以根据本示例进行对应调整。
 
 目前该方法最大的缺点是占用硬盘空间过大。~~(反过来说，如果你有足够大的硬盘，则这个问题就不再是问题了。)~~
 
