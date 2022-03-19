@@ -6,7 +6,7 @@
     ```bash
     # if you want to change the IMAGE_NAME, please modify FROM <IMAGE_NAME> in later Dockerfiles if you need to build a specific swin container
     cd ../Swin-Unet/
-    docker build --rm -t lemonmouse/    swin-unet:miniconda37-cuda11.3-cudnn8-ubuntu20.04 .
+    docker build --rm -t lemonmouse/swin-unet:miniconda37-cuda11.3-cudnn8-ubuntu20.04 .
     # note that torch and torchvision will automatch the latest version
     ```
 
@@ -14,7 +14,7 @@
     ```bash
     # please replace the <USERNAME> with your own directory
     # please change IMAGE_NAME if you have changed it in previous docker build
-    docker run --gpus all --name Swin-Unet -p 12345:12345 -v /home/lemonmouse/share/:/workspace/share/ -it lemonmouse/swin-unet:miniconda37-cuda11.3-cudnn8-ubuntu20.04 /bin/bash
+    docker run --gpus all --name Swin-Unet -p 12345:12345 -v /home/lemonmouse/Data/share/:/workspace/share/ -it lemonmouse/swin-unet:miniconda37-cuda11.3-cudnn8-ubuntu20.04 /bin/bash
     ```
 
 3. 执行容器 (可选)

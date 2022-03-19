@@ -15,5 +15,5 @@
     # please change IMAGE_NAME if you have changed it in previous docker build
     # please map the correct port number at -p xxx:xxx
     # -v <localpath>:<containerpath> is preferred as absolute path. also, please replace it by your own path
-    docker run --gpus all --name DL-base -p 12345:12345 -v /home/lemonmouse/share/:/workspace/share/ -it lemonmouse/miniconda37:cuda11.3.1-cudnn8-ubuntu20.04 /bin/bash
+    docker run --gpus all --name DL-base -p 12345:12345 -v /home/lemonmouse/Data/share/:/workspace/share/ -it lemonmouse/miniconda37:cuda11.3.1-cudnn8-ubuntu20.04 /bin/bash
     ```
